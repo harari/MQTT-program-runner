@@ -1,0 +1,61 @@
+#This is the configuration file for MQTT Client program.
+#This file defines the connection settings as well as the actions that are supported by the program.
+#
+#The format of the config part is as follows:
+#config:
+#   topic: <string> topic to which the client will subscribe
+#   broker: <string> MQTT broker server IP
+#   port: <integer> MQTT broker server port
+#   browser_path: <string> The path to the web browser's executable. forward-slashes (/).
+#
+#NOTE: when reloading YAML from the tray icon's menu, the 'broker' and 'port' parameters will NOT change in the current session.
+#      to change the MQTT server connection parameters, restart the program.
+#
+#The format of the commands part is as follows:
+#command:
+#   command_name: The name of the command. Must be unique.
+#       cmd_type: <string> The type of command, can be any of ["browser", "app", "cmd"]
+#       data: <string> Additional data needed to run the command.
+#                      for type: "browser" - The URL of the webpage to be opened.
+#                      for type: "app" - The path to the application's executable. double-backslashes (\\).
+#                      for type: "cmd" - The command line to be executed in shell.
+#       icon: <string> [optional] The path to the icon to be displayed in notifications. If not included, the program's icon will be used.
+#       toast: <string> [optional] A custom message to be displayed when the command is triggered. If not included, a "<command_name> opened" message will be displayed.
+#       message: <string> [optional] An alternate MQTT payload to be matched to trigger the command. If not included, <command_name> will be used.
+
+config : 
+    topic : "cinema_pc"
+    broker : "192.168.123.200"
+    port : 1883
+    browser_path : "C:/Program Files (x86)/Google/Chrome/Application/Chrome.exe"
+
+commands :
+    Netflix :
+        message : "Netflix"
+        cmd_type : "browser"
+        data : "http://www.netflix.com"
+        icon : "Netflix.ico"
+        toast : "Let The Binge Begin!"
+      
+    YouTube :
+        cmd_type : "browser"
+        data : "http://www.youtube.com"
+        icon : "YouTube.ico"
+        toast : "Youtube Opened"
+        
+    HarariProjects :
+        cmd_type : "browser"
+        data : "http://www.HarariProjects.com"
+        toast : "Openning The Best Site In The World"
+        
+    KODI :
+        cmd_type : "app"
+        data : "C:\\Program Files (x86)\\Kodi\\Kodi.exe"
+        icon : "KODI.ico"
+        
+    shutdown:
+        cmd_type : "cmd"
+        data : "shutdown -s -t05"
+        icon : "icon.ico"
+        toast : "Shutting Down in 5 secs"
+    
