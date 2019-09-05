@@ -70,7 +70,9 @@ Right click will open a menu with the following options:
 ## Contact info
 
 Daniel Harari – daniel@harariprojects.com
-HarariProjects.com
+
+http://HarariProjects.com
+
 https://github.com/harari/MQTT-program-runner
 
 ## LISENCE
