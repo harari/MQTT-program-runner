@@ -6,6 +6,8 @@
 #   topic: <string> topic to which the client will subscribe
 #   broker: <string> MQTT broker server IP
 #   port: <integer> MQTT broker server port
+#   username: <string> [optional] MQTT user name
+#   password: <string> [optional] MQTT user name. Will only be used if <username> was specified.
 #   browser_path: <string> The path to the web browser's executable. forward-slashes (/).
 #
 #NOTE: when reloading YAML from the tray icon's menu, the 'broker' and 'port' parameters will NOT change in the current session.
@@ -27,6 +29,8 @@ config :
     topic : "cinema_pc"
     broker : "192.168.123.200"
     port : 1883
+    username: 'harari'
+    password: '12345678'
     browser_path : "C:/Program Files (x86)/Google/Chrome/Application/Chrome.exe"
 
 commands :
@@ -46,6 +50,7 @@ commands :
     HarariProjects :
         cmd_type : "browser"
         data : "http://www.HarariProjects.com"
+        icon : "Harari.ico"
         toast : "Openning The Best Site In The World"
         
     KODI :
