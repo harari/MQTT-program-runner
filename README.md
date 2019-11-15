@@ -20,7 +20,7 @@ If you just want to run the program, no installation is required. just run the .
 if you want to run the python script : 
 
 ```sh
-pip install requiremrnts.txt
+pip install -r requiremrnts.txt
 ```
 
 ## Configuration
@@ -51,7 +51,8 @@ The format of the commands section is as follows:
 command:
    command_name: The name of the command. Must be unique.
        cmd_type: <string> The type of command, can be any of ["browser", "app", "cmd"]
-       data: <string> Additional data needed to run the command.#                      for type: "browser" - The URL of the webpage to be opened
+       data: <string> Additional data needed to run the command.
+                      for type: "browser" - The URL of the webpage to be opened
                       for type: "app" - The path to the application's executable. double-backslashes (\\).
                       for type: "cmd" - The command line to be executed in shell.
        icon: <string> [optional] The path to the icon to be displayed in notifications. If not included, the program's icon will be used.
