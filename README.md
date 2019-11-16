@@ -64,7 +64,7 @@ NOTE: The path to the customized icon is relative to the icons folder.
 There is an example for a config file in the data folder. Simply edit the file to fit your needs and system.
 
 ## Tray Menu 
-	 
+    
 After running the program, a tray icon will appear.
 Right click will open a menu with the following options:
 
@@ -76,6 +76,8 @@ Right click will open a menu with the following options:
 
 * 0.0.1
     * Work in progress
+* 1.0.0
+    * Published project
 
 ## Contact info
 

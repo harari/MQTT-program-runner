@@ -66,8 +66,6 @@ def on_message(client, userdata, msg):
                        duration=5,
                        threaded=True)
 
-        break
-
 def on_connect(client, userdata, flags, rc):
     print("CONNACK received with code %d." % (rc))
     client.subscribe(data['config']['topic'], qos=1)
