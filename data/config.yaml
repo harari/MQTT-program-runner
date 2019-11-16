@@ -29,8 +29,8 @@ config :
     topic : "cinema_pc"
     broker : "192.168.123.200"
     port : 1883
-    username: 'harari'
-    password: '12345678'
+    username: 'username'
+    password: 'password'
     browser_path : "C:/Program Files (x86)/Google/Chrome/Application/Chrome.exe"
 
 commands :
